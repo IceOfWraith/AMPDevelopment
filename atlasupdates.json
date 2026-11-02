@@ -1,0 +1,42 @@
+[
+    {
+        "UpdateStageName": "SteamCMD Download (Linux)",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "1006030",
+        "UpdateSourceTarget": "1006030",
+        "UpdateSourceVersion": "public",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "SteamCMD Download (Windows)",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "1006030",
+        "UpdateSourceTarget": "1006030",
+        "UpdateSourceVersion": "public",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Download ServerGrid Config Template",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Shinynecrid/AMPDevelopment/main/atlasservergrid.json",
+        "UpdateSourceArgs": "AMP_ServerGrid.ServerOnly.json",
+        "UpdateSourceTarget": "{{$FullRootDir}}",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Install 2x2 ServerGrid Preset",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Shinynecrid/AMPDevelopment/main/presets/ServerGrid_2x2.json",
+        "UpdateSourceTarget": "{{$FullBaseDir}}ShooterGame",
+        "UpdateSourceArgs": "ServerGrid.json",
+        "OverwriteExistingFiles": true,
+        "UpdateSourceConditionSetting": "ServerGridPreset",
+        "UpdateSourceConditionValue": "2x2",
+        "SkipOnFailure": false
+    }
+]
